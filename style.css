@@ -1,0 +1,149 @@
+*{
+  margin : 0;
+  padding:0;
+  border: border-box;
+}
+
+body{
+  height:100vh;/* vh = viewport height */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/*Profile card*/
+.profilecard{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  max-width:370px;
+  width:100%;
+  background:#fff;
+  border-radius:24px;
+  padding:25px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  margin-top:15px;
+  position:relative;/* makes the position relative*/
+}
+.profilecard::before{
+  content:"";
+  position: absolute;/*it can overlap the content*/
+  height:150px;
+  width:100%;
+  background-color:#4070f4;
+  top:0;/*it will be placed at the top of the card*/
+  left:0;/*it will be start at the extreme left of the card*/
+  border-radius:24px 24px 0 0;
+}
+/*profile image*/
+
+.image{
+  background-image:url("student-avatar-illustration-simple-cartoon-user-portrait-user-profile-icon-youth-avatar-vector-illustration-2PWERD5.jpg");
+  background-size:cover;
+  position:relative;
+  height:147px;
+  width:147px;
+  border-radius:50%;
+  border:2px solid white;
+  
+}
+.profileimg{
+  border-radius:50%;
+  border:2px solid #4070f4;
+  height:150px;
+  width:150px;
+  object-fit:cover;/*to avoid distortion*/
+  margin-bottom:10px;
+}
+
+/*Text data*/
+.textdata{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.name{
+  font-size:20px;
+  font-weight:500;
+  color:#333;
+}
+.job{
+  font-size:15px;
+  font-weight:500;
+  color:#333;
+}
+
+/*social media*/
+.socialmedia{
+  display:flex;
+  align-items:center;
+  margin-top:10px;
+}
+a{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  text-decoration:none;
+  margin:0 6px;/*Margin left and right*/
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  font-size:25px;
+}
+.fa-facebook{
+  color:blue;
+}
+.fa-square-x-twitter{
+  color:black;
+}
+.fa-linkedin{
+  color:blue;
+}
+.fa-youtube{
+  color:red;
+}
+
+/*buttons*/
+.buttons {
+  display:flex;
+  align-items:center;
+  margin-top:20px;
+}
+.button{
+  background-color: #4070f4;
+  padding: 10px 20px;/* adds padding to top,bottom and right,left*/
+  margin: 0 5px;/* adds margin to top,bottom and right,left*/
+  border:none;
+  border-radius:24px;
+  color:white;
+  font-size:15px;
+  font-weight:500;
+  /* adding animations */
+  cursor:pointer;/*changes the cursor to pointer when hovering over the button*/
+  transition:all 0.3s ease;/*adds a transition effect to the button*/
+}
+.button:hover{
+  background-color:#0e4bf1;
+}
+
+/*anaytics*/
+.analytics{
+  display:flex;
+  align-items:center;
+  margin-top:20px;
+}
+.data{
+  display:flex;
+  align-items:center;
+  color:#333;
+  padding:0 20px;
+  border-right:2px solid #e5e5e5;
+}
+.data i{
+  font-size:20px;
+  margin-right:8px;
+}
+.data:last-child{
+  /*removes the border from the last child*/
+  border-right:none;
+}
